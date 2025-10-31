@@ -3,11 +3,11 @@
 
 ### 🎯 Objectif du projet
 
-Application de bureau interactive permettant de visualiser, gérer et localiser facilement les outils ou composants dans une boîte de rangement physique à **12×12 compartiments (144 cases)**.
+Application de bureau interactive permettant de visualiser, gérer et localiser facilement les outils ou composants dans une boîte de rangement physique à **6x6 compartiments (36 cases)**.
 
 ### ✨ Fonctionnalités principales
 
-- **Grille virtuelle 12×12** : Visualisation de la boîte réelle avec 144 cases
+- **Grille virtuelle 6×6** : Visualisation de la boîte réelle avec 36 cases
 - **Gestion du contenu** : Association d'éléments (outils/composants) à chaque case
 - **Gestion de projets** : Création et sélection de projets (ex. "Circuit Raspberry Pi")
 - **Localisation visuelle** : Surbrillance automatique des cases contenant les pièces nécessaires à un projet sélectionné
