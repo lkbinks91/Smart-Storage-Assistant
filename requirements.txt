@@ -1,0 +1,18 @@
+# Dépendances du projet Smart Storage Assistant
+# À compléter au fur et à mesure du développement
+
+# Interface graphique (option 1 : Tkinter - inclus avec Python)
+# Tkinter est généralement inclus avec Python, pas besoin de l'installer
+
+# Interface graphique (option 2 : PyQt5 - alternative moderne)
+PyQt5>=5.15.0
+
+# Base de données (option SQLite - inclus avec Python)
+# sqlite3 est inclus avec Python
+
+# JSON (inclus avec Python)
+# json est inclus avec Python
+
+# Tests
+# pytest>=7.0.0
+
