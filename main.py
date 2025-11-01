@@ -1,6 +1,22 @@
 import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QComboBox
-from PyQt5.QtWidgets import QGridLayout, QPushButton
+from PyQt5.QtWidgets import QGridLayout, QPushButton, QLabel
+
+
+def display_item(reference, inventory):
+        content = inventory.get(reference, "Empty")
+        print(f"Compartment: {reference}, Content: {content}")
+        info_label.setText(f"Content : {content}")
+
+def highlight_project(project_name, projects, buttons):
+    # Réinitialiser toutes les couleurs
+    for btn in buttons.values():
+        btn.setStyleSheet("background-color: none;")
+    # Colorer les cases du projet
+    for ref in projects.get(project_name, []):
+        if ref in buttons:
+            buttons[ref].setStyleSheet("background-color: lightgreen;")
+
 
 
 projects = {    
@@ -51,22 +67,11 @@ inventory = {
         "F6": "camera sensor",
     }
 
-def display_item(reference, inventory):
-        content = inventory.get(reference, "Empty")
-        print(f"Compartment: {reference}, Content: {content}")
-
-def highlight_project(project_name, projects, buttons):
-    # Réinitialiser toutes les couleurs
-    for btn in buttons.values():
-        btn.setStyleSheet("background-color: none;")
-    # Colorer les cases du projet
-    for ref in projects.get(project_name, []):
-        if ref in buttons:
-            buttons[ref].setStyleSheet("background-color: lightgreen;")
 
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
+
 
     window = QWidget()
     layout = QGridLayout()
@@ -79,6 +84,9 @@ if __name__ == "__main__":
     combo = QComboBox()
     combo.addItems(projects.keys())
     main_layout.addWidget(combo)
+
+    info_label = QLabel("Choisis une case pour voir son contenu")
+    main_layout.addWidget(info_label)
 
     layout = QGridLayout()
     layout.setSpacing(5)
